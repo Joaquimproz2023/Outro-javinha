@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Cadastro de Professores</h2>
+
+    <form name="CadProf" action=""
+        action="" onsubmit="return CriticaCampos()">
+        <label for="matprof"> Matrícula do Professor:</label><br>
+        <input type="text" name="matprof"><br><br>
+        <label for="nomprof">Nome do Professor:</label><br>
+        <input type="text" name="nomprof"><br><br>
+        <label for="curprof">Curso do Professor:</label><br>
+        <input type="text" name="curprof"><br><br>
+        <label for="disprof">Disciplina do Professor:</label><br>
+        <input type="text" name="disprof"><br><br>
+        <Input type="submit" value="ENVIAR"></Input>
+    </form>
+    <p>Quando clicado o Botão ENVIAR, uma crítica de todos os campos deve acontecer.</p>
+    <p>Mostrar uma mensagem caso haja algum erro OU mostrar uma mensagem de que o cadastro será enviado para o Servidor de BD.</p>
+
+    <script>
+        function CriticaCampos() {
+            if (document.forms ["CadProf"] ["matprof"]. value == "") {
+                window.alert ("Matricula do Professor não pode ficar vazio! ")
+                return false
+            
+        }   else if (document.forms ["CadProf"] ["nomprof"].value == "") {
+            window.alert ("Nome do Professor não pode ficar vazio! ")
+            return false
+
+        }   else if (document.forms ["CadProf"] ["curprof"].value == "") {
+            window.alert ("Curso do Professor não pode ficar vazio! ")
+
+        }   else if (document.forms ["CadProf"] ["disprof"].value == "") {
+            window.alert ("Disciplina do Professor não pode ficar vazio! ")
+            return false
+
+        }   else
+                window.alert ("Todos os campos estão preenchidos. Serão enviados para o SGBD! ")
+                return true
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primiero DOM</title>
+</head>
+<body>
+    <h1>Primeiros passos com DOM</h1>
+    <p>A Proz se melhorar pode gerar algo foda.</p>
+    <p>Estamos aprendendo como usar o DOM em JavaScript</p>
+    
+    <div id="msg" name="divi"> Configura o resultado!</div>
+
+    <script>
+        /*var h1=window.document.getElementsByTagName('h1')[0]
+        var p1=window.document.getElementsByTagName('p')[0]
+        var p2=window.document.getElementsByTagName('p')[1]
+
+        h1.style.color = 'Blue'
+        window.document.write('O texto que está na tag h1 é: ' +h1.innerText)
+
+        p1.style.color = 'Red'
+        window.document.write('O texto que está na tag p1 é: ' +p1.innerText)
+
+        p2.style.color = 'Green'
+        window.document.write('O texto que está na tag p2 é: ' +p2.innerText)
+        */
+
+        var id= window.document.getElementById('msg')
+        id.innerText = "Modifiquei o texto da DIV"
+
+        // Por nome
+
+        var nome = window.document.getElementsByName('divi')[0]
+
+        //Por selecto
+        
+        var select= window.document.querySelector('div#msg')
+        select.style.background = "blue"
+
+    </script>
+
+
+</body>
+</html>
